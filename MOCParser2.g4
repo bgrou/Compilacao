@@ -119,7 +119,7 @@ statement
 
 /* if-statement: if (cond) { ... } ( else { ... })? */
 ifStatement
-    : IF PARENE condition PAREND compoundStatement (ELSE compoundStatement)?
+    : IF PARENE condition PAREND compoundStatement (ELSE (compoundStatement | ifStatement))?
     ;
 
 /* while-statement: while (cond) { ... } */
